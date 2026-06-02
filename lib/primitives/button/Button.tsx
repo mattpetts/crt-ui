@@ -9,6 +9,7 @@ interface ButtonProps {
     children: React.ReactNode;
     type?: 'button' | 'submit' | 'reset';
     glow?: boolean;
+    hover?: 'glitch' | 'scanline' | 'fill'
 }
 
 
@@ -20,7 +21,8 @@ export default function Button({
     disabled = false,
     type = 'button',
     glow = false,
-    width = 'fit'
+    width = 'fit',
+    hover = 'glitch'
 }: ButtonProps) {
 
     const classes = [
@@ -28,7 +30,8 @@ export default function Button({
         styles[`button--${variant}`],
         styles[`button--theme-${theme}`],
         glow ? styles['button--glow'] : '',
-        styles[`button--${width}`]
+        styles[`button--${width}`],
+        styles[`button--hover-${hover}`]
     ].join(' ');
 
     return (

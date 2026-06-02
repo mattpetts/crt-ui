@@ -1,0 +1,28 @@
+.block {
+    padding: 20px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    color: var(--text-color, black);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* -------------------------
+   THEMES
+-------------------------- */
+.block--theme-default {
+    border-color: var(--crt-default-color);
+    --text-color: var(--crt-default-color);
+}
+
+.block--theme-warning {
+    border-color: var(--crt-warning-color);
+    --text-color: var(--crt-warning-color);
+}
+
+.block--theme-error {
+    border-color: var(--crt-error-color);
+    --text-color: var(--crt-error-color);
+}

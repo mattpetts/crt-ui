@@ -1,11 +1,12 @@
 import Text from "../lib/primitives/text/Text";
 import Button from "../lib/primitives/button/Button";
+import Block from "../lib/primitives/block/Block";
 import { ThemeProvider } from "../lib/providers/ThemeProvider";
 
 function App() {
 
   return (
-    <div style={{ backgroundColor: '#19233b' }}>
+    <div style={{ backgroundColor: 'black' }}>
       <ThemeProvider>
         <Text as="h1" size="2xl">Heading 1</Text>
         <Text as="h2" size="xl">Heading 2</Text>
@@ -15,8 +16,11 @@ function App() {
         <Text as="p" size="md">Paragraph</Text>
         <Text as="sup" size="xs">Superscript</Text>
         <div></div>
-        <Button variant="primary" glow={ true }>
+        <Button variant="primary">
           <Text as="p" size="xs">Primary Button</Text>
+        </Button>
+        <Button variant="primary" glow={ true }>
+          <Text as="p" size="xs">Primary Button Glow</Text>
         </Button>
         <Button variant="secondary" glow={ true }>
           <Text as="p" size="xs">Secondary Button</Text>
@@ -27,9 +31,29 @@ function App() {
         <Button variant="primary" theme="warning" glow={ true }>
           <Text as="p" size="xs">Primary Button</Text>
         </Button>
-        <Button variant="primary" width="full" glow={ true }>
-          <Text as="p" size="xs">Full Width Primary Button</Text>
+        <Button variant="primary" width="full" glow={ true } hover="scanline">
+          <Text as="p" size="xs">Scanline hover</Text>
         </Button>
+        <Button variant="primary" width="full" glow={ true } hover="glitch">
+          <Text as="p" size="xs">Glitch hover</Text>
+        </Button>
+        <Button variant="primary" width="full" glow={ true } hover="fill">
+          <Text as="p" size="xs">Fill hover</Text>
+        </Button>
+        <Block theme="warning">
+          <Text as="h1" size="2xl">Heading 1</Text>
+          <Text as="h3" size="lg">This is a card</Text>
+          <Button variant="primary" theme="warning" width="full" glow={ true } hover="glitch">
+            <Text as="p" size="xs">Glitch hover</Text>
+          </Button>
+        </Block>
+        <Block theme="error">
+          <Text as="h1" size="2xl">Heading 1</Text>
+          <Text as="h3" size="lg">This is a card</Text>
+          <Button variant="primary" theme="error" width="full" glow={ true } hover="glitch">
+            <Text as="p" size="xs">Glitch hover</Text>
+          </Button>
+        </Block>
       </ThemeProvider>
     </div>
   )
