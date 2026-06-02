@@ -1,48 +1,18 @@
 .text {
-    font-family: monospace
+  font-family: monospace;
+  color: inherit;
+  text-shadow:
+    0 0 2px var(--crt-glow, transparent),
+    0 0 8px var(--crt-glow, transparent);
 }
 
-.text--xs {
-  font-size: 0.7rem;
-}
+/* -------------------------
+   SIZE SYSTEM
+-------------------------- */
 
-.text--sm {
-  font-size: 0.85rem;
-}
-
-.text--md {
-  font-size: 1rem;
-}
-
-.text--lg {
-  font-size: 1.25rem;
-}
-
-.text--xl {
-  font-size: 1.75rem;
-}
-
-.text--2xl {
-  font-size: 2.5rem;
-}
-
-.text--default {
-  color: var(--crt-default-color);
-  --crt-glow: var(--crt-default-glow);
-}
-
-.text--warning {
-  color: var(--crt-warning-color);
-  --crt-glow: var(--crt-warning-glow);
-}
-
-.text--error {
-  color: var(--crt-error-color);
-  --crt-glow: var(--crt-error-glow);
-}
-
-.text--glow {
-    text-shadow:
-        0 0 2px var(--crt-glow),
-        0 0 8px var(--crt-glow);
-}
+.text--xs { font-size: 0.7rem; }
+.text--sm { font-size: 0.85rem; }
+.text--md { font-size: 1rem; }
+.text--lg { font-size: 1.25rem; }
+.text--xl { font-size: 1.75rem; }
+.text--2xl { font-size: 2.5rem; }

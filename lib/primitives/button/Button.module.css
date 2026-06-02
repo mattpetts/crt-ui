@@ -1,0 +1,56 @@
+.button {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 16px;
+  color: var(--button-text-color, var(--button-accent));
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+/* -------------------------
+   THEMES
+-------------------------- */
+
+.button--theme-default {
+  background-color: var(--crt-default-color);
+  --button-text-color: black;
+  --button-accent: var(--crt-default-color);
+}
+
+.button--theme-warning {
+  background-color: var(--crt-warning-color);
+  --button-text-color: black;
+  --button-accent: var(--crt-warning-color);
+}
+
+.button--theme-error {
+  background-color: var(--crt-error-color);
+  --button-text-color: white;
+  --button-accent: var(--crt-error-color);
+}
+
+/* -------------------------
+   VARIANTS
+-------------------------- */
+
+.button--primary {
+  border: 1px solid var(--button-accent);
+  background-color: transparent;
+  --button-text-color: var(--button-accent);
+}
+
+.button--secondary {
+  border: none;
+  --button-text-color: black;
+}
+
+.button--tertiary {
+  border: none;
+  background-color: transparent;
+  --button-text-color: var(--button-accent);
+}

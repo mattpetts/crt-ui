@@ -1,4 +1,5 @@
 import Text from "../lib/primitives/text/Text";
+import Button from "../lib/primitives/button/Button";
 import { ThemeProvider } from "../lib/providers/ThemeProvider";
 
 function App() {
@@ -12,9 +13,25 @@ function App() {
       <Text as="h5" size="sm">Heading 5</Text>
       <Text as="p" size="md">Paragraph</Text>
       <Text as="sup" size="xs">Superscript</Text>
-      <Text glow={ true } size="md">Glow</Text>
-      <Text variant="warning" size="md" glow={ true }>Warning</Text>
-      <Text variant="error" size="md" glow={ true }>Error</Text>
+      <div></div>
+      <Button variant="primary">
+        <Text as="p" size="md">Primary Button</Text>
+      </Button>
+      <Button variant="secondary">
+        <Text as="p" size="md">Secondary Button</Text>
+      </Button>
+      <Button variant="tertiary">
+        <Text as="p" size="md">Tertiary Button</Text>
+      </Button>
+      <Button variant="primary">
+        <Text as="p" size="md">Primary Button</Text>
+      </Button>
+      <Button variant="primary" theme="error">
+        <Text as="p" size="md">Primary Button</Text>
+      </Button>
+      <Button variant="primary" theme="warning">
+        <Text as="p" size="md">Primary Button</Text>
+      </Button>
     </ThemeProvider>
   )
 }
