@@ -1,4 +1,5 @@
 export type CrtTheme = {
+  bg: string;
   default: {
     color: string;
     glow: string;

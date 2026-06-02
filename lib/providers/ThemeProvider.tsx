@@ -12,14 +12,16 @@ const ThemeContext = createContext<CrtTheme|null>(null);
 export function ThemeProvider({ theme = defaultTheme, children }: ThemeProviderProps) {
     const cssVariables = useMemo(() => {
     return {
-      "--crt-default-color": theme.default.color,
-      "--crt-default-glow": theme.default.glow,
+        "--crt-bg-color": theme.bg,
 
-      "--crt-warning-color": theme.warning.color,
-      "--crt-warning-glow": theme.warning.glow,
+        "--crt-default-color": theme.default.color,
+        "--crt-default-glow": theme.default.glow,
 
-      "--crt-error-color": theme.error.color,
-      "--crt-error-glow": theme.error.glow,
+        "--crt-warning-color": theme.warning.color,
+        "--crt-warning-glow": theme.warning.glow,
+
+        "--crt-error-color": theme.error.color,
+        "--crt-error-glow": theme.error.glow,
     } as React.CSSProperties;
   }, [theme]);
 

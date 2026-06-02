@@ -1,6 +1,7 @@
 import type { CrtTheme } from "../contracts/theme";
 
 export const defaultTheme: CrtTheme = {
+  bg: "#383757",
   default: {
     color: "#00ff41",
     glow: "rgba(0, 255, 65, 0.6)",
