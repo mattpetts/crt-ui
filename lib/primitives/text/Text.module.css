@@ -1,0 +1,25 @@
+.text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+.text--default {
+  color: var(--crt-default-color);
+  --crt-glow: var(--crt-default-glow);
+}
+
+.text--warning {
+  color: var(--crt-warning-color);
+  --crt-glow: var(--crt-warning-glow);
+}
+
+.text--error {
+  color: var(--crt-error-color);
+  --crt-glow: var(--crt-error-glow);
+}
+
+.text--glow {
+    text-shadow:
+        0 0 2px var(--crt-glow),
+        0 0 8px var(--crt-glow);
+}
