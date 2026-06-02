@@ -1,9 +1,8 @@
 .text {
   font-family: monospace;
   color: inherit;
-  text-shadow:
-    0 0 2px var(--crt-glow, transparent),
-    0 0 8px var(--crt-glow, transparent);
+  text-shadow: var(--crt-text-shadow, none);
+  margin: 0 0;
 }
 
 /* -------------------------

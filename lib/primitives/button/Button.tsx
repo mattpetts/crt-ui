@@ -1,12 +1,14 @@
 import styles from './Button.module.css'
 
 interface ButtonProps {
-    variant?: 'primary' | 'secondary' | 'tertiary';
+    variant?: 'primary' | 'secondary';
+    width?: 'full' | 'fit';
     theme?: 'default' | 'warning' | 'error';
     action?: () => void;
-    disabled?: boolean
+    disabled?: boolean;
     children: React.ReactNode;
-    type?: 'button' | 'submit' | 'reset'
+    type?: 'button' | 'submit' | 'reset';
+    glow?: boolean;
 }
 
 
@@ -16,13 +18,17 @@ export default function Button({
     action, 
     children, 
     disabled = false,
-    type = 'button'
+    type = 'button',
+    glow = false,
+    width = 'fit'
 }: ButtonProps) {
 
     const classes = [
         styles.button,
         styles[`button--${variant}`],
-        styles[`button--theme-${theme}`]
+        styles[`button--theme-${theme}`],
+        glow ? styles['button--glow'] : '',
+        styles[`button--${width}`]
     ].join(' ');
 
     return (

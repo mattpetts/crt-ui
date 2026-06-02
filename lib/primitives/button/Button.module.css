@@ -1,15 +1,31 @@
 .button {
-  width: fit-content;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  transition:
+    text-shadow 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
   margin-bottom: 16px;
   color: var(--button-text-color, var(--button-accent));
 }
 
+.button--full {
+  width: 100%;
+}
+
+.button--fit {
+  width: fit-content;
+}
+
 .button:hover {
   cursor: pointer;
-  opacity: 0.85;
+  text-shadow:
+    0 0 4px var(--button-glow),
+    0 0 12px var(--button-glow),
+    0 0 20px var(--button-glow);
+
+  box-shadow:
+    0 0 8px var(--button-glow);
 }
 
 /* -------------------------
@@ -20,18 +36,21 @@
   background-color: var(--crt-default-color);
   --button-text-color: black;
   --button-accent: var(--crt-default-color);
+  --button-glow: var(--crt-default-glow);
 }
 
 .button--theme-warning {
   background-color: var(--crt-warning-color);
   --button-text-color: black;
   --button-accent: var(--crt-warning-color);
+  --button-glow: var(--crt-warning-glow);
 }
 
 .button--theme-error {
   background-color: var(--crt-error-color);
   --button-text-color: white;
   --button-accent: var(--crt-error-color);
+  --button-glow: var(--crt-error-glow);
 }
 
 /* -------------------------
@@ -49,8 +68,15 @@
   --button-text-color: black;
 }
 
-.button--tertiary {
-  border: none;
-  background-color: transparent;
-  --button-text-color: var(--button-accent);
+/* -------------------------
+   Effects
+-------------------------- */
+
+.button--glow {
+    box-shadow:
+      0 0 2px var(--button-glow, transparent),
+      0 0 8px var(--button-glow, transparent);
+    --crt-text-shadow:
+      0 0 2px var(--button-glow),
+      0 0 8px var(--button-glow);
 }
