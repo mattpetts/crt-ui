@@ -1,6 +1,5 @@
 .text {
   font-family: monospace;
-  color: inherit;
   text-shadow: var(--crt-text-shadow, none);
   margin: 0 0;
 }
@@ -15,3 +14,12 @@
 .text--lg { font-size: 1.25rem; }
 .text--xl { font-size: 1.75rem; }
 .text--2xl { font-size: 2.5rem; }
+
+/* -------------------------
+   COLOR SYSTEM
+-------------------------- */
+
+.text--inherit { color: inherit; }
+.text--default { color: var(--crt-default-color); }
+.text--warning { color: var(--crt-warning-color); }
+.text--error { color: var(--crt-error-color); }

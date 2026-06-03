@@ -1,0 +1,1 @@
+export type ThemeVariants = 'default' | 'warning' | 'error';
