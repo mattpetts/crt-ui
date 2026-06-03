@@ -1,7 +1,6 @@
-import Text from "../lib/primitives/text/Text";
-import Button from "../lib/primitives/button/Button";
-import Block from "../lib/primitives/block/Block";
+import { Text, Block, Button, GenericInput } from "../lib/components/primitives";
 import { ThemeProvider } from "../lib/providers/ThemeProvider";
+
 
 function App() {
 
@@ -53,6 +52,11 @@ function App() {
           <Button variant="primary" theme="error" width="full" glow={ true } hover="glitch">
             <Text as="p" size="xs">Glitch hover</Text>
           </Button>
+          <GenericInput type="text" name="name" value="hello" />
+          <GenericInput type="number" name="age" value="23" />
+          <GenericInput type="email" name="age" />
+          <GenericInput type="date" name="age" />
+          <GenericInput type="password" name="age" />
         </Block>
       </ThemeProvider>
     </div>

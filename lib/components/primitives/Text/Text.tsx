@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { AllowedTextElements, TextColors, TextSizes } from '../../types';
+import type { AllowedTextElements, TextColors, TextSizes } from '../../../types';
 
 import styles from './Text.module.css';
 
@@ -10,7 +10,7 @@ interface TextProps {
     color?: TextColors;
 }
 
-export default function Text ({
+export function Text ({
     as,
     children,
     size,

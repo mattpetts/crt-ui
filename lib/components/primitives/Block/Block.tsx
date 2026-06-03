@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type{ ThemeVariants, BlockDirections } from '../../types';
+import type{ ThemeVariants, BlockDirections } from '../../../types';
 
 import styles from './Block.module.css';
 
@@ -9,7 +9,7 @@ interface BlockProps {
     direction?: BlockDirections;
 }
 
-export default function Block({ 
+export function Block({ 
     children,
     theme = 'default',
     direction = 'col'

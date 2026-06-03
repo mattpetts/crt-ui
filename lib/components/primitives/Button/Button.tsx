@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import styles from './Button.module.css';
-import type { ThemeVariants, ButtonTypes, ButtonVariants, ButtonWidths, ButtonHoverStates } from '../../types';
+import type { ThemeVariants, ButtonTypes, ButtonVariants, ButtonWidths, ButtonHoverStates } from '../../../types';
 
 interface ButtonProps {
     variant?: ButtonVariants;
@@ -15,7 +15,7 @@ interface ButtonProps {
 }
 
 
-export default function Button({
+export function Button({
     variant = 'primary',
     theme = 'default',
     action, 

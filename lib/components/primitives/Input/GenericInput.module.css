@@ -1,0 +1,33 @@
+.input {
+    width: 100%;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    display: block;
+    font-family: monospace;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    caret-shape: block;
+}
+
+/* -------------------------
+   THEMES
+-------------------------- */
+
+.input--theme-default {
+  border-color: var(--crt-default-color);
+  color: var(--crt-default-color);;
+}
+
+.input--theme-warning {
+  border-color: var(--crt-warning-color);
+  color: var(--crt-warning-color);;
+}
+
+.input--theme-error {
+  border-color: var(--crt-error-color);
+  color: var(--crt-error-color);;
+}

@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ThemeProvider } from '../../providers/ThemeProvider';
-import Block from './Block';
-import Text from '../text/Text';
+import { ThemeProvider } from '../../../providers/ThemeProvider';
+import { Block, Text } from '../index';
 
 const meta = {
   component: Block,
