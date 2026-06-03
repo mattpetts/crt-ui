@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ThemeProvider } from '../../providers/ThemeProvider';
 import Text from './Text';
 
+
 const meta = {
   component: Text,
 

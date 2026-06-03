@@ -1,8 +1,9 @@
-import styles from './Block.module.css'
+import styles from './Block.module.css';
+import type { ThemeVariants } from '../../types/theme';
 
 interface BlockProps {
     children: React.ReactNode;
-    theme?: 'default' | 'warning' | 'error'
+    theme?: ThemeVariants
 }
 
 export default function Block({ 

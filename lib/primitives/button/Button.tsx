@@ -1,9 +1,10 @@
-import styles from './Button.module.css'
+import styles from './Button.module.css';
+import type { ThemeVariants } from '../../types/theme';
 
 interface ButtonProps {
     variant?: 'primary' | 'secondary';
     width?: 'full' | 'fit';
-    theme?: 'default' | 'warning' | 'error';
+    theme?: ThemeVariants;
     action?: () => void;
     disabled?: boolean;
     children: React.ReactNode;
