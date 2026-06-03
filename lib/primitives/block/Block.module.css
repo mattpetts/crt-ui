@@ -5,7 +5,6 @@
     border-style: solid;
     color: var(--text-color, black);
     display: flex;
-    flex-direction: column;
     gap: 16px;
 }
 
@@ -25,4 +24,15 @@
 .block--theme-error {
     border-color: var(--crt-error-color);
     --text-color: var(--crt-error-color);
+}
+
+/* -------------------------
+   VARIANTS
+-------------------------- */
+.block--col {
+    flex-direction: column;
+}
+
+.block--row {
+    flex-direction: row;
 }

@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import styles from './Button.module.css';
 import type { ThemeVariants } from '../../types/theme';
 
@@ -26,14 +28,14 @@ export default function Button({
     hover = 'glitch'
 }: ButtonProps) {
 
-    const classes = [
+    const classes = clsx(
         styles.button,
-        styles[`button--${variant}`],
-        styles[`button--theme-${theme}`],
-        glow ? styles['button--glow'] : '',
-        styles[`button--${width}`],
-        styles[`button--hover-${hover}`]
-    ].join(' ');
+        variant && styles[`button--${variant}`],
+        theme && styles[`button--theme-${theme}`],
+        glow && styles['button--glow'],
+        width && styles[`button--${width}`],
+        hover && styles[`button--hover-${hover}`]
+    )
 
     return (
         <button className={ classes } onClick={ action } disabled={ disabled } type={ type }>

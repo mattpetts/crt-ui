@@ -23,6 +23,13 @@ const meta = {
         'error'
       ],
     },
+    direction: {
+      control: { type: 'select' },
+      options: [
+        'row',
+        'col',
+      ],
+    },
   },
 } satisfies Meta<typeof Block>;
 
@@ -32,7 +39,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: <Text>I am a default theme block</Text>,
+    children: <><Text as="h1" size="2xl">I am a default theme block</Text><Text>Here is some other text</Text></>,
     theme: 'default'
   },
 };
