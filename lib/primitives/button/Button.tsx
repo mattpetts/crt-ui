@@ -1,18 +1,17 @@
 import clsx from 'clsx';
-
 import styles from './Button.module.css';
-import type { ThemeVariants } from '../../types/theme';
+import type { ThemeVariants, ButtonTypes, ButtonVariants, ButtonWidths, ButtonHoverStates } from '../../types';
 
 interface ButtonProps {
-    variant?: 'primary' | 'secondary';
-    width?: 'full' | 'fit';
+    variant?: ButtonVariants;
+    width?: ButtonWidths;
     theme?: ThemeVariants;
     action?: () => void;
     disabled?: boolean;
     children: React.ReactNode;
-    type?: 'button' | 'submit' | 'reset';
+    type?: ButtonTypes;
     glow?: boolean;
-    hover?: 'glitch' | 'scanline' | 'fill'
+    hover?: ButtonHoverStates
 }
 
 

@@ -1,12 +1,12 @@
 import clsx from 'clsx';
+import type{ ThemeVariants, BlockDirections } from '../../types';
 
 import styles from './Block.module.css';
-import type { ThemeVariants } from '../../types/theme';
 
 interface BlockProps {
     children: React.ReactNode;
     theme?: ThemeVariants;
-    direction?: 'row' | 'col';
+    direction?: BlockDirections;
 }
 
 export default function Block({ 

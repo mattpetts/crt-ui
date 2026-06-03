@@ -1,23 +1,21 @@
 import clsx from 'clsx';
-
-import type { AllowedTextElements } from "../../types/primitives/text";
-import type { ThemeVariants } from "../../types/theme";
+import type { AllowedTextElements, TextColors, TextSizes } from '../../types';
 
 import styles from './Text.module.css';
 
-interface TextProps<T extends AllowedTextElements = "p"> {
+interface TextProps {
     children: React.ReactNode;
-    as?: T;
-    size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
-    color?: 'inherit' | ThemeVariants;
+    as?: AllowedTextElements;
+    size?: TextSizes;
+    color?: TextColors;
 }
 
-export default function Text<T extends AllowedTextElements = "p">({
+export default function Text ({
     as,
     children,
     size,
     color = 'inherit'
-}: TextProps<T>) {
+}: TextProps) {
     const Component = (as || "p");
 
     const classes = clsx(
