@@ -1,11 +1,18 @@
 .block {
-    padding: 20px;
-    border-radius: 5px;
-    border-width: 1px;
+    padding: 1rem;
+    border-radius: 0.3125rem;
+    border-width: 0.0625rem;
     border-style: solid;
     color: var(--text-color, black);
     display: flex;
-    gap: 16px;
+    gap: 0.75rem; 
+}
+
+@media (min-width: 768px) {
+  .block {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
 }
 
 /* -------------------------
