@@ -1,5 +1,5 @@
 .button {
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 5px;
   transition:
     text-shadow 0.2s ease,
@@ -19,6 +19,12 @@
 
 .button:hover {
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 10px 20px;
+  }
 }
 
 /* -------------------------

@@ -9,8 +9,14 @@
     display: block;
     font-family: monospace;
     box-sizing: border-box;
-    padding: 15px 10px;
+    padding: 10px 5px;
     caret-shape: block;
+}
+
+@media (min-width: 768px) {
+  .input {
+    padding: 15px 10px;
+  }
 }
 
 /* -------------------------
